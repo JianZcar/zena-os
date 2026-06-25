@@ -2,6 +2,7 @@ set -ouex pipefail
 
 shopt -s nullglob
 
+mkdir -p /var/tmp
 KVER=$(ls /usr/lib/modules | head -n1)
 
 depmod -a "$KVER"
