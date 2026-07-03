@@ -23,8 +23,8 @@ coprs=(
 
   yalter/niri
   ulysg/xwayland-satellite
-  #avengemedia/danklinux
-  #avengemedia/dms
+  avengemedia/danklinux
+  avengemedia/dms
   lionheartp/Hyprland
   errornointernet/quickshell
   celestelove/libcava
