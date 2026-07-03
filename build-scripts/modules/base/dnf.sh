@@ -23,8 +23,14 @@ coprs=(
 
   yalter/niri
   ulysg/xwayland-satellite
-  avengemedia/danklinux
-  avengemedia/dms
+  #avengemedia/danklinux
+  #avengemedia/dms
+  lionheartp/Hyprland
+  errornointernet/quickshell
+  celestelove/libcava
+  celestelove/app2unit
+  brycensranch/gpu-screen-recorder-git
+  celestelove/caelestia
 
   che/nerd-fonts
 )
