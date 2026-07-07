@@ -92,7 +92,6 @@ packages=(
   fuse-common
   fwupd
   inotify-tools
-  kitty
   libcamera
   libcamera-v4l2
   libcamera-gstreamer
@@ -120,6 +119,7 @@ packages=(
   firewall-config
   flatpak
   glx-utils
+  kitty
   tailscale
   v4l2loopback
 )
