@@ -58,11 +58,11 @@ packages=(
   # Security / Authentication
   audispd-plugins
   audit
-  firewalld
   fprintd
   fprintd-pam
   pam_yubico
   pcsc-lite
+  firewalld
 
   # Containers
   distrobox
@@ -119,7 +119,6 @@ packages=(
   firewall-config
   flatpak
   glx-utils
-  kitty
   tailscale
   v4l2loopback
 )
