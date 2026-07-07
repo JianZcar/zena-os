@@ -58,11 +58,12 @@ packages=(
   # Security / Authentication
   audispd-plugins
   audit
+  firewalld
   fprintd
   fprintd-pam
   pam_yubico
   pcsc-lite
-  firewalld
+  
 
   # Containers
   distrobox
@@ -92,6 +93,7 @@ packages=(
   fuse-common
   fwupd
   inotify-tools
+  kitty
   libcamera
   libcamera-v4l2
   libcamera-gstreamer
