@@ -63,7 +63,6 @@ packages=(
   fprintd-pam
   pam_yubico
   pcsc-lite
-  
 
   # Containers
   distrobox
