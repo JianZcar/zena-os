@@ -16,6 +16,7 @@ packages=(
   kitty
   kf6-kimageformats
   nautilus
+  noctalia
   noctalia-git
   papirus-icon-theme
   quickshell
