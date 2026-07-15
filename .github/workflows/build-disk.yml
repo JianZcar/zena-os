@@ -8,7 +8,6 @@ on:
 env:
   IMAGE_NAME: "${{ github.event.repository.name }}"
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"
-  DEFAULT_TAG: "latest"
 
 jobs:
   build_release:
@@ -30,6 +29,16 @@ jobs:
     timeout-minutes: 60
 
     steps:
+      - name: Set tag prefix
+        run: |
+          if [ "${{ github.ref_name }}" != "main" ]; then
+            echo "TAG_PREFIX=${{ github.ref_name }}." >> $GITHUB_ENV
+            echo "DEFAULT_TAG=${{ github.ref_name }}.latest" >> $GITHUB_ENV
+          else
+            echo "TAG_PREFIX=" >> $GITHUB_ENV
+            echo "DEFAULT_TAG=latest" >> $GITHUB_ENV
+          fi
+
       - name: Change image name depending on build flavor
         env:
           BUILD_FLAVOR: ${{ matrix.flavor }}
@@ -285,6 +294,7 @@ jobs:
 
     name: Publish metadata
     needs: build_release
+    if: github.ref_name == 'main'
   
     runs-on: ubuntu-24.04
   
