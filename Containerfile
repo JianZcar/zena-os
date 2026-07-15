@@ -11,9 +11,6 @@ COPY system-files/wm /
 
 ARG IMAGE=${IMAGE}
 
-RUN mkdir -p /usr/lib/bootupd/updates \
-    && cp -r /usr/lib/efi/*/*/* /usr/lib/bootupd/updates
-
 # NVIDIA flavor only: overlay nvidia system-files (COPY can't be conditional)
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     if [ "$IMAGE" = "zena-nvidia" ]; then cp -avf /ctx/system-files/nvidia/. / ; fi
