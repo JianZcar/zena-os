@@ -39,7 +39,7 @@ jobs:
       packages: write
       id-token: write
 
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - name: Change image name depending on build flavor
