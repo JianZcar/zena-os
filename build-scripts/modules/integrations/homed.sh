@@ -2,8 +2,6 @@ set -ouex pipefail
 
 shopt -s nullglob
 
-semodule -i /ctx/patches/homed-patch-01.pp
-
 authselect select sssd with-systemd-homed with-faillock without-nullok
 authselect apply-changes
 
@@ -12,6 +10,7 @@ system_services=(
 )
 
 systemctl enable "${system_services[@]}"
+semanage permissive -a systemd_homed_t
 
 preset_file="/usr/lib/systemd/system-preset/01-zena.preset"
 touch "$preset_file"

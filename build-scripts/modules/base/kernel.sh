@@ -25,5 +25,3 @@ dnf5 -y install "${packages[@]}"
 dnf5 versionlock add "${packages[@]}"
 
 rm -rf /boot/*
-
-echo "::endgroup::"
